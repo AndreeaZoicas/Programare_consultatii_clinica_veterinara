@@ -1,0 +1,45 @@
+﻿@page
+@model Programare_consultatii_clinica_veterinara.Pages.Medici.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Medic</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Medic.MedicID" />
+            <div class="form-group">
+                <label asp-for="Medic.Nume" class="control-label"></label>
+                <input asp-for="Medic.Nume" class="form-control" />
+                <span asp-validation-for="Medic.Nume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medic.Specializare" class="control-label"></label>
+                <input asp-for="Medic.Specializare" class="form-control" />
+                <span asp-validation-for="Medic.Specializare" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medic.ExperientaAni" class="control-label"></label>
+                <input asp-for="Medic.ExperientaAni" class="form-control" />
+                <span asp-validation-for="Medic.ExperientaAni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

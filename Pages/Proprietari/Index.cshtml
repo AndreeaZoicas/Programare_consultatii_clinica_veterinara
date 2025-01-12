@@ -1,0 +1,48 @@
+﻿@page
+@model Programare_consultatii_clinica_veterinara.Pages.Proprietari.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Proprietar[0].Nume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proprietar[0].Telefon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proprietar[0].Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Proprietar) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ProprietarID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ProprietarID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ProprietarID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

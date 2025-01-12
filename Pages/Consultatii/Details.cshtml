@@ -1,0 +1,43 @@
+﻿@page
+@model Programare_consultatii_clinica_veterinara.Pages.Consultatii.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Consultatie</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consultatie.Data)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consultatie.Data)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consultatie.Ora)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consultatie.Ora)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consultatie.Medic)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consultatie.Medic.MedicID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consultatie.Pacient)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consultatie.Pacient.PacientID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Consultatie.ConsultatieID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
