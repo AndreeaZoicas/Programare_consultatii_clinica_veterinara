@@ -21,8 +21,8 @@ namespace Programare_consultatii_clinica_veterinara.Pages.Consultatii
 
         public IActionResult OnGet()
         {
-        ViewData["MedicID"] = new SelectList(_context.Set<Medic>(), "MedicID", "MedicID");
-        ViewData["PacientID"] = new SelectList(_context.Pacient, "PacientID", "PacientID");
+        ViewData["MedicID"] = new SelectList(_context.Set<Medic>(), "MedicID", "Nume");
+        ViewData["PacientID"] = new SelectList(_context.Pacient, "PacientID", "Nume");
             return Page();
         }
 

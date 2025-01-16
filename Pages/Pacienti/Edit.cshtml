@@ -35,8 +35,11 @@
                 <span asp-validation-for="Pacient.DataNasterii" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Pacient.ProprietarID" class="control-label"></label>
-                <select asp-for="Pacient.ProprietarID" class="form-control" asp-items="ViewBag.ProprietarID"></select>
+                <label asp-for="Pacient.Proprietar" class="control-label"></label>
+                <select asp-for="Pacient.ProprietarID" class="form-control" asp-items="ViewBag.ProprietarID">
+                    <option value="">Select Proprietar</option>
+                </select>
+
                 <span asp-validation-for="Pacient.ProprietarID" class="text-danger"></span>
             </div>
             <div class="form-group">

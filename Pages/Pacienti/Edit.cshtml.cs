@@ -36,7 +36,7 @@ namespace Programare_consultatii_clinica_veterinara.Pages.Pacienti
                 return NotFound();
             }
             Pacient = pacient;
-           ViewData["ProprietarID"] = new SelectList(_context.Set<Proprietar>(), "ProprietarID", "ProprietarID");
+           ViewData["ProprietarID"] = new SelectList(_context.Set<Proprietar>(), "ProprietarID", "Nume");
             return Page();
         }
 

@@ -25,7 +25,8 @@ namespace Programare_consultatii_clinica_veterinara.Pages.Consultatii
         {
             Consultatie = await _context.Consultatie
                 .Include(c => c.Medic)
-                .Include(c => c.Pacient).ToListAsync();
+                .Include(c => c.Pacient)
+                .ToListAsync();
         }
     }
 }

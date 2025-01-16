@@ -21,8 +21,8 @@ namespace Programare_consultatii_clinica_veterinara.Pages.Recenzii
 
         public IActionResult OnGet()
         {
-        ViewData["MedicID"] = new SelectList(_context.Medic, "MedicID", "MedicID");
-        ViewData["PacientID"] = new SelectList(_context.Pacient, "PacientID", "PacientID");
+        ViewData["MedicID"] = new SelectList(_context.Medic, "MedicID", "Nume");
+        ViewData["PacientID"] = new SelectList(_context.Pacient, "PacientID", "Nume");
             return Page();
         }
 
