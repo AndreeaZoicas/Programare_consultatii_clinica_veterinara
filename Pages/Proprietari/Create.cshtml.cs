@@ -27,7 +27,6 @@ namespace Programare_consultatii_clinica_veterinara.Pages.Proprietari
         [BindProperty]
         public Proprietar Proprietar { get; set; } = default!;
 
-        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
